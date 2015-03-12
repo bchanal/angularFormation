@@ -1,0 +1,27 @@
+<table class="tweets">
+    <tr  ng-repeat="tweet in tweets | orderBy:'date'">
+        <th><a href="#/{{tweet.id}}">{{tweet.authorName}} </a> <th/>
+        <td>{{tweet.message}}</td>
+        <td>{{tweet.date | ago}} </td>
+        <td><img src="http://www.gravatar.com/avatar/{{tweet.authorEmailHash}}"> </td>
+    </tr>
+    </table>
+
+<div ng-show="errors.length()>1"> error {{error.code}}, {{error.message}}</div>
+
+<br/>
+
+Formulaire
+<form>
+<div class="UserCtrl">
+<label>Name</label><input ng-model = "name"  placeholder="name"/><br/>
+<label>Email</label><input ng-model = "email"  placeholder="Email"/><br/>
+</div>
+<br/>
+<div id=message">
+  <label>Votre message</label>  <textarea ng-model="message" placeholder="message"/>
+</div>
+    <button ng-click="submit()"> Tweeter</button>
+</form>
+
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table class="tweets">
+    <tr  ng-class="{'inactive': !tweet.answer}" ng-repeat="tweet in tweets | orderBy:'date'">
+        <th><a href="#/{{tweet.id}}">{{tweet.authorName}} </a> <th/>
+        <td>{{tweet.message}}</td>
+        <td>{{tweet.date | ago}} </td>
+    </tr>
+</table>
+</body>
+</html>

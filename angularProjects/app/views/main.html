@@ -1,0 +1,67 @@
+<div class="box">
+  <button ng-click="goDetail()"> Details </button>
+  <a href="#/detail" >Details en lien pour changer un peu</a>
+    <div class="title">Lorem Ipsum  </div>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur
+         adipisicing elit, sed do eiusmod tempor incididunt ut
+         labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in
+ reprehenderit in voluptate velit esse cillum dolore eu
+ fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+ non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+
+</div>
+
+<i class="fa fa-eye fa-spin"></i>
+<i class="fa fa-eye fa-spin"></i>
+<br/>
+
+<div class="background"></div>
+
+<div class="transport col-md-4">
+<i class="fa fa-plane "></i>
+  <br/>
+  <div class="title">Plane</div>
+  <br/>
+  Really fast and offers nice landscapes, it might sometimes crash through
+</div>
+
+<div class="transport col-md-4">
+<i class="fa fa-truck "></i>
+  <br/>
+  <div class="title">Truck</div>
+  <br/>
+  Usefull for carrying large things, not that good to quickly find a parking lot
+</div>
+
+<div class="transport col-md-4">
+<i class="fa fa-users"></i>
+  <br/>
+  <div class="title">Crowd</div>
+  <br/>
+  Slow, needs a lot of nice people along the way and might let you fall
+</div>
+<br/>
+
+<ul>
+  <li ng-repeat="hello in hellos">{{hello.title}} en {{hello.description}}</li>
+</ul>
+
+
+J'ai faim !! Parlons donc de choucroute.
+<br/>
+<input ng-model="myFilter" placeholder="recherche"/>
+
+<br/>
+
+<ul>
+  <li ng-repeat="myItem in choucroute | filter : myFilter">{{myItem}}</li>
+</ul>
+
+
+
+
+
+
